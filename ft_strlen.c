@@ -1,38 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ialinaok <ialinaok@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/26 15:05:58 by ialinaok          #+#    #+#             */
-/*   Updated: 2021/11/26 15:05:59 by ialinaok         ###   ########.fr       */
+/*   Created: 2021/11/26 15:05:36 by ialinaok          #+#    #+#             */
+/*   Updated: 2021/11/26 15:05:39 by ialinaok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include<stdio.h>
 
-int ft_isalpha(int c)
+size_t	ft_strlen(const char *s)
 {
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+	size_t	n;
+
+	n = 0;
+	while (s[n] != '\0')
 	{
-		return (1);
+		n++;
 	}
-	else
-	{
-		return (0);
-	}
+	return (n);
 }
 
-int main(void)
+int	main(void)
 {
-	if (ft_isalpha('A') == 0)
-	{
-		printf("This is not alphabet \n");
-	}
-	else
-	{
-		printf("This is alphabet \n");
-	}
+	char	str[] = "Hi Alistair";
+
+	printf("the length of the string is %ld \n", ft_strlen(str));
 	return (0);
 }

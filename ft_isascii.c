@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ialinaok <ialinaok@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/26 15:05:58 by ialinaok          #+#    #+#             */
-/*   Updated: 2021/11/26 15:05:59 by ialinaok         ###   ########.fr       */
+/*   Created: 2021/11/26 15:06:10 by ialinaok          #+#    #+#             */
+/*   Updated: 2021/11/26 15:21:02 by ialinaok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include<stdio.h>
 
-int ft_isalpha(int c)
+int ft_isascii(int c)
 {
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+	if (c >= 0 && c <= 127)
 	{
 		return (1);
 	}
@@ -26,13 +26,13 @@ int ft_isalpha(int c)
 
 int main(void)
 {
-	if (ft_isalpha('A') == 0)
+	if (ft_isascii(678) == 0)
 	{
-		printf("This is not alphabet \n");
+		printf("This is not encoded in ASCII \n");
 	}
 	else
 	{
-		printf("This is alphabet \n");
+		printf("This is encoded in ASCII \n");
 	}
 	return (0);
 }

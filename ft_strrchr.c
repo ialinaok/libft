@@ -1,0 +1,57 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ialinaok <ialinaok@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/12/10 16:09:56 by ialinaok          #+#    #+#             */
+/*   Updated: 2021/12/10 16:45:13 by ialinaok         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <stdio.h>
+
+char    *ft_strrchr(const char *str, int c)
+{
+    char    *ptr;
+    char    *ptr_nul;
+
+    ptr = (char *)str;
+    while (*ptr != '\0')
+    {
+        ptr++;
+    }
+    ptr_nul = ptr;
+    while ((*ptr != c) && ptr != str)
+    {
+        ptr--;
+    }
+    if (*ptr == c)
+    {
+        return (ptr);
+    }
+    else
+    {
+        return (ptr_nul);
+    }
+}
+
+// int main(void)
+// {
+//     char    arr1[] = "bullshits";
+//     char    arr2[] = "mascara";
+//     char    *ptr1;
+//     char    *ptr2;
+//     char    *ptr3;
+
+//     printf("address of 's' in arr1 is: %p\n", &arr1[8]);
+//     printf("address of 'a' in arr2 is: %p\n", &arr2[6]);
+//     ptr1 = ft_strrchr(arr1, 's');
+//     printf("in arr1 2nd 's' was found at address: %p\n", ptr1);
+//     ptr2 = ft_strrchr(arr2, 'a');
+//     printf("in arr2 last 'a' was found at address: %p\n", ptr2);
+//     ptr3 = ft_strrchr(arr1, 'a');
+//     printf("return value of strchr: %c", *ptr3);
+//     return (0);
+// }

@@ -6,13 +6,13 @@
 /*   By: ialinaok <ialinaok@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 15:10:22 by ialinaok          #+#    #+#             */
-/*   Updated: 2021/12/10 15:18:54 by ialinaok         ###   ########.fr       */
+/*   Updated: 2021/12/10 21:21:54 by ialinaok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
 	int		l;
 

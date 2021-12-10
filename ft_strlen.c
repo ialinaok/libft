@@ -6,7 +6,7 @@
 /*   By: ialinaok <ialinaok@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 15:05:36 by ialinaok          #+#    #+#             */
-/*   Updated: 2021/11/26 15:05:39 by ialinaok         ###   ########.fr       */
+/*   Updated: 2021/12/10 21:41:29 by ialinaok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,10 @@ size_t	ft_strlen(const char *s)
 	return (n);
 }
 
-int	main(void)
-{
-	char	str[] = "Hi Alistair";
+// int	main(void)
+// {
+// 	char	str[] = "Hi Alistair";
 
-	printf("the length of the string is %ld \n", ft_strlen(str));
-	return (0);
-}
+// 	printf("the length of the string is %ld \n", ft_strlen(str));
+// 	return (0);
+// }

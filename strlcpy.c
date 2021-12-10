@@ -32,7 +32,6 @@
 //   //int size = 20;
 //   //har  pastehere[size];
 //   size_t r;
-  
 //   //strcpy(pastehere, first);
 //   printf("the first string is %s\n", first);
 //   r = strlcat(first, second, 4);

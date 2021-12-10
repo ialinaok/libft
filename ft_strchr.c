@@ -6,30 +6,30 @@
 /*   By: ialinaok <ialinaok@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 15:24:47 by ialinaok          #+#    #+#             */
-/*   Updated: 2021/12/10 16:09:43 by ialinaok         ###   ########.fr       */
+/*   Updated: 2021/12/10 21:32:24 by ialinaok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
 
-char    *ft_strchr(const char *str, int c)
+char	*ft_strchr(const char *str, int c)
 {
-    char    *ptr;
+	char	*ptr;
 
-    ptr = (char *)str;
-    while ((*ptr != '\0') && (*ptr != c))
-    {
-        ptr++;
-    }
-    if (*ptr == c)
-    {
-        return (ptr);
-    }
-    else
-    {
-        return (ptr);
-    }
+	ptr = (char *)str;
+	while ((*ptr != '\0') && (*ptr != c))
+	{
+		ptr++;
+	}
+	if (*ptr == c)
+	{
+		return (ptr);
+	}
+	else
+	{
+		return (ptr);
+	}
 }
 
 // int main(void)

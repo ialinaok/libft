@@ -6,35 +6,35 @@
 /*   By: ialinaok <ialinaok@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 16:09:56 by ialinaok          #+#    #+#             */
-/*   Updated: 2021/12/10 16:45:13 by ialinaok         ###   ########.fr       */
+/*   Updated: 2021/12/10 21:41:48 by ialinaok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-char    *ft_strrchr(const char *str, int c)
+char	*ft_strrchr(const char *str, int c)
 {
-    char    *ptr;
-    char    *ptr_nul;
+	char	*ptr;
+	char	*ptr_nul;
 
-    ptr = (char *)str;
-    while (*ptr != '\0')
-    {
-        ptr++;
-    }
-    ptr_nul = ptr;
-    while ((*ptr != c) && ptr != str)
-    {
-        ptr--;
-    }
-    if (*ptr == c)
-    {
-        return (ptr);
-    }
-    else
-    {
-        return (ptr_nul);
-    }
+	ptr = (char *)str;
+	while (*ptr != '\0')
+	{
+		ptr++;
+	}
+	ptr_nul = ptr;
+	while ((*ptr != c) && ptr != str)
+	{
+		ptr--;
+	}
+	if (*ptr == c)
+	{
+		return (ptr);
+	}
+	else
+	{
+		return (ptr_nul);
+	}
 }
 
 // int main(void)

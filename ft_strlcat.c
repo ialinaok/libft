@@ -6,47 +6,64 @@
 /*   By: ialinaok <ialinaok@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/09 21:43:04 by ialinaok          #+#    #+#             */
-/*   Updated: 2021/12/10 21:35:44 by ialinaok         ###   ########.fr       */
+/*   Updated: 2021/12/11 15:34:10 by ialinaok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<stdio.h>
-#include<string.h>
 #include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
+	int		n;
 	size_t	dst_len;
 	size_t	src_len;
-	size_t	n;
 
+	dst_len = ft_strlen(dst);
+	src_len = ft_strlen(src);
 	n = size;
-	dst_len = 0;
-	while (*dst != '\0')
+	while ((n != 0) && (*dst != '\0'))
 	{
 		dst++;
-		dst_len++;
+		n--;
 	}
-	while (((size - 1) > 0) && ((size - 1) > dst_len))
+	if (n == 0)
+	{
+		return (size + src_len);
+	}
+	while (((n - 1) != 0) && (*src != '\0'))
 	{
 		*dst++ = *src++;
-		size--;
+		n --;
 	}
-	src_len = 0;
-	while (*src != '\0')
-	{
-		src++;
-		src_len++;
-	}
-	if (n < dst_len)
-	{
-		return (n + src_len);
-	}
-	else
-	{
-		return (dst_len + src_len);
-	}
+	*dst = '\0';
+	return (dst_len + src_len);
 }
+
+// size_t	ft_strlcat(char *dst, const char *src, size_t size)
+// {
+// 	size_t	dst_len;
+// 	size_t	src_len;
+// 	size_t	n;
+
+// 	n = size;
+// 	dst_len = ft_strlen(dst);
+// 	src_len = ft_strlen(src);
+// 	while (((size - 1) > 0) && ((size - 1) > dst_len))
+// 	{
+// 		*dst++ = *src++;
+// 		size--;
+// 	}
+// 	dst[n - 1] = '\0';
+// 	if (n < dst_len)
+// 	{
+// 		return (dst_len + src_len);
+// 	}
+// 	else
+// 	{
+// 		return (n + src_len);
+// 	}
+// }
 
 // int main(void)
 // {

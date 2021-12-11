@@ -6,7 +6,7 @@
 /*   By: ialinaok <ialinaok@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 16:09:56 by ialinaok          #+#    #+#             */
-/*   Updated: 2021/12/10 21:41:48 by ialinaok         ###   ########.fr       */
+/*   Updated: 2021/12/11 22:45:05 by ialinaok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,26 +15,25 @@
 char	*ft_strrchr(const char *str, int c)
 {
 	char	*ptr;
-	char	*ptr_nul;
 
 	ptr = (char *)str;
 	while (*ptr != '\0')
 	{
 		ptr++;
 	}
-	ptr_nul = ptr;
-	while ((*ptr != c) && ptr != str)
-	{
-		ptr--;
-	}
-	if (*ptr == c)
+	if (c == '\0')
 	{
 		return (ptr);
 	}
-	else
+	while (ptr != (str - 1))
 	{
-		return (ptr_nul);
+		if (*ptr == c)
+		{
+			return (ptr);
+		}
+		ptr--;
 	}
+	return (NULL);
 }
 
 // int main(void)

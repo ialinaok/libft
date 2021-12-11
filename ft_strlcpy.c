@@ -6,38 +6,12 @@
 /*   By: ialinaok <ialinaok@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/09 11:00:44 by ialinaok          #+#    #+#             */
-/*   Updated: 2021/12/11 12:01:39 by ialinaok         ###   ########.fr       */
+/*   Updated: 2021/12/11 12:05:27 by ialinaok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include "libft.h"
-
-// size_t	ft_strlcpy(char *dest, const char *src, size_t dst_size)
-// {
-// 	size_t	counter;
-
-// 	counter = 0;
-// 	if ((dst_size > 0) && (dst_size != 0))
-// 	{
-// 		while (src[counter] != '\0')
-// 		{
-// 			if (counter == dst_size)
-// 			{
-// 				counter--;
-// 				break ;
-// 			}
-// 			*(dest + counter) = *(src + counter);
-// 			counter++;
-// 		}
-// 	}
-// 	*(dest + counter) = '\0';
-// 	while (*(src + counter) != '\0')
-// 	{
-// 		counter++;
-// 	}
-// 	return (counter);
-// }
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dst_size)
 {
@@ -65,7 +39,31 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dst_size)
 	}
 	return (src_len);
 }
+// size_t	ft_strlcpy(char *dest, const char *src, size_t dst_size)
+// {
+// 	size_t	counter;
 
+// 	counter = 0;
+// 	if ((dst_size > 0) && (dst_size != 0))
+// 	{
+// 		while (src[counter] != '\0')
+// 		{
+// 			if (counter == dst_size)
+// 			{
+// 				counter--;
+// 				break ;
+// 			}
+// 			*(dest + counter) = *(src + counter);
+// 			counter++;
+// 		}
+// 	}
+// 	*(dest + counter) = '\0';
+// 	while (*(src + counter) != '\0')
+// 	{
+// 		counter++;
+// 	}
+// 	return (counter);
+// }
 // int	main(void)
 // {
 //   char dst[6] = "Alina";

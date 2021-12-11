@@ -6,24 +6,24 @@
 /*   By: ialinaok <ialinaok@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 13:18:39 by ialinaok          #+#    #+#             */
-/*   Updated: 2021/12/10 21:29:09 by ialinaok         ###   ########.fr       */
+/*   Updated: 2021/12/11 10:20:49 by ialinaok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
+// #include<stdio.h>
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
-{
-	unsigned char	*put_dest;
-	const char		*put_src;
+// void	*ft_memmove(void *dest, const void *src, size_t n)
+// {
+// 	unsigned char	*put_dest;
+// 	const char		*put_src;
 
-	put_dest = dest;
-	put_src = src;
-	while (n > 0)
-	{
-	}
-	return (dest);
-}
+// 	put_dest = dest;
+// 	put_src = src;
+// 	while (n > 0)
+// 	{
+// 	}
+// 	return (dest);
+// }
 
 // int main(void)
 // {

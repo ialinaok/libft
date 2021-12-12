@@ -22,6 +22,7 @@ SRCS = ft_isalpha.c \
 		ft_strchr.c \
 		ft_strrchr.c \
 		ft_strncmp.c \
+		ft_memchr.c \
 
 MAKELIB = ar -rcs
 OBJS = $(SRCS:.c=.o)

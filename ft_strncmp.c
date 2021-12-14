@@ -6,7 +6,7 @@
 /*   By: ialinaok <ialinaok@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 23:03:56 by ialinaok          #+#    #+#             */
-/*   Updated: 2021/12/12 14:48:57 by ialinaok         ###   ########.fr       */
+/*   Updated: 2021/12/13 14:39:21 by ialinaok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,14 +63,14 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 
 // int	main(void)
 // {
-// 	char	arr[] = "something newer";
-// 	char	arr2[] = "something new";
+// 	char	arr[] = "something";
+// 	char	arr2[] = "something";
 // 	int		n;
 // 	size_t	size;
 
-// 	printf("size of unsigned char: %lu\n", sizeof(unsigned char *));
+// 	printf("size of unsigned char: %lu\n", sizeof(const unsigned char *));
 // 	printf("size of const char*: %lu\n", sizeof(const char *));
-// 	size = 14;
+// 	size = 9;
 // 	printf("arr: %s\narr: %s\nsize is: %zu\n", arr, arr2, size);
 // 	n = ft_strncmp(arr, arr2, size);
 // 	printf("function return is: %d", n);

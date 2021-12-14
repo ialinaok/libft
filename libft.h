@@ -6,7 +6,7 @@
 /*   By: ialinaok <ialinaok@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 14:28:41 by ialinaok          #+#    #+#             */
-/*   Updated: 2021/12/13 00:26:13 by ialinaok         ###   ########.fr       */
+/*   Updated: 2021/12/14 19:08:45 by ialinaok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,10 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 
 void	*ft_memchr(const void *s, int c, size_t n);
 
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
 
+char	*ft_strnstr(const char *s1, const char *s2, size_t n);
+
+int		ft_atoi(const char *nptr);
 
 #endif //LIBFT_H

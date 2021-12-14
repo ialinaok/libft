@@ -6,7 +6,7 @@
 /*   By: ialinaok <ialinaok@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 14:28:41 by ialinaok          #+#    #+#             */
-/*   Updated: 2021/12/14 19:25:45 by ialinaok         ###   ########.fr       */
+/*   Updated: 2021/12/14 23:22:37 by ialinaok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,5 +56,7 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t n);
 int		ft_atoi(const char *nptr);
 
 void	*ft_calloc(size_t nelem, size_t elsize);
+
+char	*ft_strdup(const char *s);
 
 #endif //LIBFT_H

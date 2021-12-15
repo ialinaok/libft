@@ -6,7 +6,7 @@
 /*   By: ialinaok <ialinaok@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/09 11:00:44 by ialinaok          #+#    #+#             */
-/*   Updated: 2021/12/11 12:05:27 by ialinaok         ###   ########.fr       */
+/*   Updated: 2021/12/15 23:20:50 by ialinaok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dst_size)
 	}
 	return (src_len);
 }
+
 // size_t	ft_strlcpy(char *dest, const char *src, size_t dst_size)
 // {
 // 	size_t	counter;

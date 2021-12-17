@@ -1,75 +1,57 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   tester.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ialinaok <ialinaok@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/12/11 12:29:52 by ialinaok          #+#    #+#             */
+/*   Updated: 2021/12/17 01:20:22 by ialinaok         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdio.h>
-//#include <string.h>
+#include <stdlib.h>
 
-size_t	strlen(const char *s)
+char * strings = malloccccc(memcal(s, c) + count_strings);
+
+//this part is to copy words to a string and add nulls
+while (str[i] != 0)
 {
-	size_t	n;
-
-	n = 0;
-	while (s[n] != '\0')
+	if (str[i] == c)
 	{
-		n++;
+		i++;
 	}
-	return (n);
-}
-
-void	*memcpy(void *dest, const void *src, size_t n)
-{
-	unsigned char	*put_dest;
-	const char		*put_src;
-
-	put_dest = dest;
-	put_src = src;
-	while (n > 0)
+	if (str[i] != c)
 	{
-		*put_dest++ = *put_src++;
-		n--;
-	}
-	return (dest);
-}
-
-size_t	strlcpy(char *dest, const char *src, size_t dst_size)
-{
-	size_t	counter;
-
-	counter = 0;
-	if (dst_size > 0)
-	{
-		while (src[counter] != '\0')
+		while (str[i] != c && != 0) //this is where the copying takes place
 		{
-			if (counter == dst_size)
-			{
-				counter--;
-				break ;
-			}
-			*(dest + counter) = *(src + counter);
-			counter++;
+			*strings = str[i];
+			i++;
+		}
+		*strings = '\0'; //at this point str[i] == c, so we add null, first word is finished
+		i++;
+	}
+	i++;
+}
+
+//aaand this part for actually passing the addresses of words to split array
+
+char	**split = maloccc((count_words + 1) * sizeof(char *));
+
+while (i <= (memcal(s,c) + count_strings))
+{
+	if (strings[i] == '\0') //if it equals to nul, just skip
+	{
+		i++;
+	}
+	if (strings[i] != '\0')
+	{
+		*split = &strings[i]; //we give the first address of the words
+		while (strings[i] != '\0') //and now we iterate through the word
+		{
+			i++; //this will get us to where strings == null
 		}
 	}
-	*(dest + counter) = '\0';
-	while (*(src + counter) != '\0')
-	{
-		counter++;
-	}
-	return (counter);
 }
-// size_t	strlcpy(char * dst, const char * src, size_t maxlen) {
-//     const size_t srclen = strlen(src);
-//     if (srclen + 1 < maxlen) {
-//         memcpy(dst, src, srclen + 1);
-//     } else if (maxlen != 0) {
-//         memcpy(dst, src, maxlen - 1);
-//         dst[maxlen-1] = '\0';
-//     }
-//     return srclen;
-// }
-
-int main(void)
-{
-  char dst[6] = "Alina";
-  char src[10] = "Hardfield";
-  
-  strlcpy(dst, src, 6);
-  printf("the new string is: %s", dst);
-  return (0);
-}
+//condition of the big loop will get checked again 

@@ -6,26 +6,28 @@
 /*   By: ialinaok <ialinaok@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 15:28:12 by ialinaok          #+#    #+#             */
-/*   Updated: 2021/12/17 17:05:33 by ialinaok         ###   ########.fr       */
+/*   Updated: 2021/12/17 21:49:11 by ialinaok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdlib.h>
 
 static int	count_digits(int n)
 {
 	int	count;
 	int	minus;
-	
-	if (n == -2147483618)
+
+	if (n == -2147483648)
 	{
 		return (11);
 	}
 	minus = 0;
 	if (n < 0)
 	{
-		n = n * (-1);
+		n *= -1;
 		minus = 1;
 	}
-	if (n < 10 && n > 0)
+	if (n < 10 && n >= 0)
 	{
 		return (1 + minus);
 	}
@@ -34,35 +36,54 @@ static int	count_digits(int n)
 		count = count_digits(n / 10);
 		return (1 + count + minus);
 	}
+	return (0);
 }
 
-static void	put_nbr(char *str, int n)
+static int	put_nbr(char *str, int n, int i)
 {
 	if (n < 0)
 	{
-		*str++ = '-';
+		str[i] = '-';
+		i++;
 		if (n == -2147483648)
 		{
-			*str = "2147483648";
-			return ;
+			str[i] = '2';
+			i++;
+			i = put_nbr(str, 147483648, i);
 		}
 		n *= -1;
 	}
 	if (n >= 10)
 	{
-		put_nbr(str, n/10);
+		i = put_nbr(str, n / 10, i);
 	}
-	*str = n % 10 + '0';
-	str++;
+	str[i] = n % 10 + '0';
+	i++;
+	return (i);
 }
 
 char	*ft_itoa(int n)
 {
 	int		i;
+	int		count;
 	char	*str;
 
-	str = malloc(count_digits(n) + 1);
-	put_nbr(str, n);
-	str[count_digits(n)] = '\0';
+	i = 0;
+	count = count_digits(n);
+	str = malloc(count + 1);
+	put_nbr(str, n, i);
+	str[count] = '\0';
 	return (str);
 }
+
+// int main(void)
+// {
+//   int n;
+//   char  *arr;
+
+//   n = -58778;
+//   arr = ft_itoa(n);
+//   printf("this is n: %s\n", arr);
+//   free (arr);
+//   return (0);
+// }

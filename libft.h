@@ -6,12 +6,14 @@
 /*   By: ialinaok <ialinaok@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 14:28:41 by ialinaok          #+#    #+#             */
-/*   Updated: 2021/12/17 21:07:44 by ialinaok         ###   ########.fr       */
+/*   Updated: 2021/12/18 14:32:51 by ialinaok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
+#include <unistd.h> 
 
 int		ft_isalpha(int c);
 
@@ -66,6 +68,8 @@ char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *s2);
 
 char	*ft_itoa(int n);
+
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 

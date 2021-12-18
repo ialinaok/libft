@@ -6,11 +6,11 @@
 /*   By: ialinaok <ialinaok@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 17:39:15 by ialinaok          #+#    #+#             */
-/*   Updated: 2021/12/10 18:05:20 by ialinaok         ###   ########.fr       */
+/*   Updated: 2021/12/18 14:35:29 by ialinaok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
+#include <stdio.h>
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
@@ -19,7 +19,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 
 	put_dest = dest;
 	put_src = src;
-	while (n > 0)
+	while (n > 0 && (dest != NULL || src != NULL))
 	{
 		*put_dest++ = *put_src++;
 		n--;
@@ -42,7 +42,14 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 // 	printf("\n");
 // 	while (arr[n] != '\0')
 // 	{
-// 		printf("%c", arr[n]);
+// 		printf("%c\n", arr[n]);
 // 		n++;
 // 	}
+// 	//to see it overlaps memory
+// 	char str[] = "Live well!";
+// 	n = 0;
+// 	printf("%s\n", str);
+// 	ft_memcpy(&str[3], &str[2], 4);
+// 	printf("%s\n", str);
+// 	return (0);
 // }

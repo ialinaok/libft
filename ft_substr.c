@@ -6,13 +6,42 @@
 /*   By: ialinaok <ialinaok@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 09:58:02 by ialinaok          #+#    #+#             */
-/*   Updated: 2021/12/15 12:04:27 by ialinaok         ###   ########.fr       */
+/*   Updated: 2021/12/20 16:02:12 by ialinaok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
 #include "libft.h"
+
+char	*ft_substr(char const *s, unsigned int start, size_t len)
+{
+	char	*substr;
+	int		i;
+
+	i = 0;
+	substr = malloc(len + 1);
+	if (!substr)
+	{
+		return (NULL);
+	}
+	if (ft_strlen(s) >= start)
+	{
+		while (len > 0)
+		{
+			substr[i] = s[start];
+			i++;
+			start++;
+			len--;
+		}
+		substr[i] = '\0';
+	}
+	else
+	{
+		ft_memset(substr, '\0', len + 1);
+	}
+	return (substr);
+}
 
 // char	*ft_substr(char const *s, unsigned int start, size_t len)
 // {
@@ -42,26 +71,31 @@
 // 	return (substr);
 // }
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
-{
-	char	*substr;
-	size_t	slen;
+// char	*ft_substr(char const *s, unsigned int start, size_t len)
+// {
+// 	char	*substr;
+// 	size_t	slen;
 
-	slen = ft_strlen(&s[start]);
-	if (slen >= len)
-	{
-		substr = malloc(len + 1);
-		ft_memcpy(substr, &s[start], len);
-		substr[len] = '\0';
-	}
-	if (slen < len)
-	{
-		substr = malloc(slen + 1);
-		ft_memcpy(substr, &s[start], slen);
-		substr[slen] = '\0';
-	}
-	return (substr);
-}
+// 	slen = ft_strlen(&s[start]);
+// 	if (slen >= len)
+// 	{
+// 		substr = malloc(len + 1);
+// 		if (start >= ft_strlen(s))
+// 		{
+// 			ft_memset(substr, '\0', len + 1);
+// 			return (substr);
+// 		}
+// 		ft_memcpy(substr, &s[start], len);
+// 		substr[len] = '\0';
+// 	}
+// 	if (slen < len)
+// 	{
+// 		substr = malloc(slen + 1);
+// 		ft_memcpy(substr, &s[start], slen);
+// 		substr[slen] = '\0';
+// 	}
+// 	return (substr);
+// }
 
 // int	main(void)
 // {

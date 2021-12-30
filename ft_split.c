@@ -6,30 +6,46 @@
 /*   By: ialinaok <ialinaok@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 16:29:28 by ialinaok          #+#    #+#             */
-/*   Updated: 2021/12/16 21:19:08 by ialinaok         ###   ########.fr       */
+/*   Updated: 2021/12/23 16:01:39 by ialinaok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <stdlib.h>
 #include "libft.h"
 
-char	**ft_split(char const*s, char c)
+static int	count_strings(const char *s, char c)
 {
-	
+	int	i;
+	int	strings;
+
+	i = 0;
+	strings = 0;
+	while (s[i] != '\0')
+	{
+		if (s[i] == c)
+			i++;
+		if (s[i] != c && s[i] != '\0')
+		{
+			strings++;
+			while (s[i] != c && s[i] != '\0')
+				i++;
+			i++;
+		}
+	}
+	return (strings);
 }
 
-static	int	memcal(char *s, char c)
+static int	memcal(const char *s, char c)
 {
-	int i;
-	
+	int	i;
+
 	i = 0;
 	while (*s != '\0')
 	{
 		if (*s == c)
-		{
 			s++;
-		}
-		if (*s != c)
+		if (*s != c && *s != '\0')
 		{
 			i++;
 			s++;
@@ -38,60 +54,75 @@ static	int	memcal(char *s, char c)
 	return (i);
 }
 
-static	int	easy_trim(char *str, char c)
+static char	*put_strings(const char *s, char c)
 {
-	int	i;
+	int		i;
+	int		j;
+	char	*strings;
 
-	if (str[0] == '\0')
+	i = 0;
+	j = 0;
+	strings = malloc(memcal(s, c) + count_strings(s, c) * 1);
+	while (s[i] != '\0')
 	{
-		return (0);
-	}
-	i = ft_strlen(str) - 1;
-		if (str[i] == c)
+		if (s[i] == c && s[i] != '\0')
+			i++;
+		while (s[i] != c && s[i] != '\0')
 		{
-			while (str[i] == c && i > 0)
-			{
-				i--;
-			}
+			strings[j++] = s[i++];
 		}
-		return (i);
+		if (s[i] == '\0')
+			break ;
+		strings[j++] = '\0';
+	}
+	return (strings);
 }
 
-static	int	count_strings(char *str, char c)
+char *put_split(char *strings)
 {
-	int	wrd;
-	int	n;
-	
-	wrd = 0;
-	n = easy_trim(str, c);
-	while (n > 0)
+	return (strings);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**split;
+	char	*strings;
+	int		j;
+	int		mem;
+
+	split = malloc((count_strings(s, c) + 1) * sizeof(char *));
+	// if (!s || !split || !strings)
+	// 	return (0);
+	mem = memcal(s, c) + count_strings(s, c) * 1;
+	if (mem == 0)
 	{
-		if (str[n] == c && n != 0)
+		*split = NULL;
+		return (split);
+	}
+	strings = put_strings(s, c);
+	j = 0;
+	while (mem > 0)
+	{
+		split[j] = put_split(strings);
+		j++;
+		while (*strings++ != '\0')
 		{
-			while (str[n] == c && n != 0)
-			{
-				n--;
-			}
-			wrd++;
+			mem--;
 		}
-		n--;
+		strings++;
+		mem--;
 	}
-	if (str[0] != c && str[0] != '\0')
-	{
-		return (wrd + 1);
-	}
-	return (wrd);
+	return (split);
 }
+// int	main(void)
+// {
+// 	char	str[] = "";
+// 	char	c;
+// 	int		n;
 
-int	main(void)
-{
-	char	str[] = "";
-	char	c;
-	int		n;
-
-	c = ',';
-	n = count_strings(str, c);
-	printf("this is the string: %s\n", str);
-	printf("it has  %d  words\n", n);
-	return (0);
-}
+// 	c = ',';
+// 	n = count_strings(str, c);
+// 	printf("this is the string: %s\n", str);
+// 	printf("it has  %d  words\n", n);
+// 	return (0);
+// }

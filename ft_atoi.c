@@ -6,10 +6,15 @@
 /*   By: ialinaok <ialinaok@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 15:34:25 by ialinaok          #+#    #+#             */
-/*   Updated: 2021/12/19 18:48:49 by ialinaok         ###   ########.fr       */
+/*   Updated: 2022/01/03 15:57:18 by ialinaok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** ft_atoi function converts the initial portion of the string
+** pointed to by nptr to integer representation;
+** returns the converted value;
+*/
 #include <stdio.h>
 
 int	ft_atoi(const char *nptr)

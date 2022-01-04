@@ -6,7 +6,7 @@
 /*   By: ialinaok <ialinaok@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 15:28:12 by ialinaok          #+#    #+#             */
-/*   Updated: 2021/12/17 21:49:11 by ialinaok         ###   ########.fr       */
+/*   Updated: 2022/01/04 19:06:59 by ialinaok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,7 @@ static int	count_digits(int n)
 	int	minus;
 
 	if (n == -2147483648)
-	{
 		return (11);
-	}
 	minus = 0;
 	if (n < 0)
 	{
@@ -28,9 +26,7 @@ static int	count_digits(int n)
 		minus = 1;
 	}
 	if (n < 10 && n >= 0)
-	{
 		return (1 + minus);
-	}
 	if (n >= 10)
 	{
 		count = count_digits(n / 10);
@@ -54,9 +50,7 @@ static int	put_nbr(char *str, int n, int i)
 		n *= -1;
 	}
 	if (n >= 10)
-	{
 		i = put_nbr(str, n / 10, i);
-	}
 	str[i] = n % 10 + '0';
 	i++;
 	return (i);
@@ -71,6 +65,8 @@ char	*ft_itoa(int n)
 	i = 0;
 	count = count_digits(n);
 	str = malloc(count + 1);
+	if (!str)
+		return (NULL);
 	put_nbr(str, n, i);
 	str[count] = '\0';
 	return (str);

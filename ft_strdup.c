@@ -6,12 +6,10 @@
 /*   By: ialinaok <ialinaok@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 23:06:49 by ialinaok          #+#    #+#             */
-/*   Updated: 2021/12/15 09:37:44 by ialinaok         ###   ########.fr       */
+/*   Updated: 2022/01/04 19:03:07 by ialinaok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strdup(const char *s)
@@ -21,7 +19,9 @@ char	*ft_strdup(const char *s)
 	char	*ret;
 
 	str = (char *)s;
-	ptr = malloc(ft_strlen(s) + 1);
+	ptr = (char *)malloc(ft_strlen(s) + 1);
+	if (!ptr)
+		return (NULL);
 	ret = ptr;
 	while (*str != '\0')
 	{

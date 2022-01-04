@@ -6,7 +6,7 @@
 /*   By: ialinaok <ialinaok@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 12:13:39 by ialinaok          #+#    #+#             */
-/*   Updated: 2021/12/15 16:28:42 by ialinaok         ###   ########.fr       */
+/*   Updated: 2022/01/04 19:27:46 by ialinaok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	newstr = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
 	if (!newstr)
-	{
 		return (NULL);
-	}
 	i = 0;
 	while (*s1)
 	{

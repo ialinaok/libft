@@ -6,12 +6,10 @@
 /*   By: ialinaok <ialinaok@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 16:29:28 by ialinaok          #+#    #+#             */
-/*   Updated: 2021/12/23 16:01:39 by ialinaok         ###   ########.fr       */
+/*   Updated: 2022/01/04 17:25:35 by ialinaok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
 #include "libft.h"
 
 static int	count_strings(const char *s, char c)
@@ -62,15 +60,13 @@ static char	*put_strings(const char *s, char c)
 
 	i = 0;
 	j = 0;
-	strings = malloc(memcal(s, c) + count_strings(s, c) * 1);
+	strings = (char *)malloc(memcal(s, c) + count_strings(s, c) * 1);
 	while (s[i] != '\0')
 	{
 		if (s[i] == c && s[i] != '\0')
 			i++;
 		while (s[i] != c && s[i] != '\0')
-		{
 			strings[j++] = s[i++];
-		}
 		if (s[i] == '\0')
 			break ;
 		strings[j++] = '\0';
@@ -90,9 +86,9 @@ char	**ft_split(char const *s, char c)
 	int		j;
 	int		mem;
 
-	split = malloc((count_strings(s, c) + 1) * sizeof(char *));
-	// if (!s || !split || !strings)
-	// 	return (0);
+	split = (char **)malloc((count_strings(s, c) + 1) * sizeof(char *));
+	if (!split)
+		return (NULL);
 	mem = memcal(s, c) + count_strings(s, c) * 1;
 	if (mem == 0)
 	{

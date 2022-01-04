@@ -6,12 +6,10 @@
 /*   By: ialinaok <ialinaok@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 09:58:02 by ialinaok          #+#    #+#             */
-/*   Updated: 2021/12/20 16:02:12 by ialinaok         ###   ########.fr       */
+/*   Updated: 2022/01/04 19:27:30 by ialinaok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
 #include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
@@ -22,9 +20,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	i = 0;
 	substr = malloc(len + 1);
 	if (!substr)
-	{
 		return (NULL);
-	}
 	if (ft_strlen(s) >= start)
 	{
 		while (len > 0)
@@ -37,9 +33,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		substr[i] = '\0';
 	}
 	else
-	{
 		ft_memset(substr, '\0', len + 1);
-	}
 	return (substr);
 }
 

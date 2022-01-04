@@ -1,11 +1,9 @@
 # this makefile will compile a libft library from the source .c files
 
-# first let's declare some variables
-
-NAME = libft.a
+NAME=libft.a
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
-SRCS = ft_isalpha.c \
+SRCS =  ft_isalpha.c \
 		ft_isdigit.c \
 		ft_isalnum.c \
 		ft_isascii.c \
@@ -31,28 +29,37 @@ SRCS = ft_isalpha.c \
 		ft_substr.c \
 		ft_strjoin.c \
 		ft_strtrim.c \
+		ft_split.c \
 		ft_itoa.c \
 		ft_strmapi.c \
-		\
 		ft_striteri.c \
 		ft_putchar_fd.c \
 		ft_putstr_fd.c \
 		ft_putendl_fd.c \
-		ft_putnbr_fd.c \
+		ft_putnbr_fd.c
+BONUS_SRCS :=   ft_lstadd_back.c \
+				ft_lstadd_front.c \
+				ft_lstlast.c \
+				ft_lstnew.c \
+				ft_lstsize.c \
+				ft_lstdelone.c \
+				ft_lstiter.c \
+				ft_lstclear.c \
+				ft_lstmap.c
 
-MAKELIB = ar -rcs
 OBJS = $(SRCS:.c=.o)
+BONUS_OBJS := $(BONUS_SRCS:.c=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(MAKELIB) $(NAME) $(OBJS)
+	ar -rcs	$(NAME)	$(OBJS)
 
-%.o: %.c # take all .c files and compile them into object files
-	$(CC) $(CFLAGS) -c $(SRCS)
+bonus: $(BONUS_OBJS) $(OBJS)
+	ar -rcs $(NAME) $(OBJS) $(BONUS_OBJS)
 
 clean: # will remove .o files
-	rm -f $(OBJS)
+	rm -f $(OBJS) $(BONUS_OBJS)
 
 fclean: clean # will run clean(rm all .o files) and libft.a
 	rm -f $(NAME)

@@ -1,31 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ialinaok <ialinaok@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/30 16:25:14 by ialinaok          #+#    #+#             */
-/*   Updated: 2022/01/04 18:47:12 by ialinaok         ###   ########.fr       */
+/*   Created: 2022/01/04 15:29:34 by ialinaok          #+#    #+#             */
+/*   Updated: 2022/01/04 15:41:48 by ialinaok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// typedef struct s_list
-// {
-// 	void			*content;
-// 	struct s_list	*next;
-// }	t_list;
-
-t_list	*ft_lstnew(void *content)
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	t_list	*newnode;
+	t_list	*first;
+	t_list	*next;
 
-	newnode = (t_list *)malloc(sizeof(t_list));
-	if (!newnode)
-		return (NULL);
-	newnode->content = content;
-	newnode->next = NULL;
-	return (newnode);
+	if (lst && del)
+	{
+		next = *lst;
+		while (next != NULL)
+		{
+			first = next;
+			next = next->next;
+			del(first->content);
+			free(first);
+		}
+		*lst = NULL;
+	}
 }

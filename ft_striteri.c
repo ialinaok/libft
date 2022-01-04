@@ -6,7 +6,7 @@
 /*   By: ialinaok <ialinaok@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 15:14:46 by ialinaok          #+#    #+#             */
-/*   Updated: 2022/01/04 19:09:11 by ialinaok         ###   ########.fr       */
+/*   Updated: 2022/01/04 20:54:17 by ialinaok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 	int	i;
 
 	i = 0;
-	if(s)
+	if (s)
 	{
 		while (s[i] != '\0')
 		{

@@ -6,7 +6,7 @@
 /*   By: ialinaok <ialinaok@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 16:29:28 by ialinaok          #+#    #+#             */
-/*   Updated: 2022/01/04 17:25:35 by ialinaok         ###   ########.fr       */
+/*   Updated: 2022/01/05 18:00:13 by ialinaok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,110 +15,67 @@
 static int	count_strings(const char *s, char c)
 {
 	int	i;
-	int	strings;
+	int	str_num;
 
 	i = 0;
-	strings = 0;
+	str_num = 0;
 	while (s[i] != '\0')
 	{
 		if (s[i] == c)
 			i++;
 		if (s[i] != c && s[i] != '\0')
 		{
-			strings++;
+			str_num++;
 			while (s[i] != c && s[i] != '\0')
 				i++;
-			i++;
 		}
 	}
-	return (strings);
+	return (str_num);
 }
 
-static int	memcal(const char *s, char c)
+int	find_start(const char *s, char c)
 {
 	int	i;
 
 	i = 0;
-	while (*s != '\0')
-	{
-		if (*s == c)
-			s++;
-		if (*s != c && *s != '\0')
-		{
-			i++;
-			s++;
-		}
-	}
+	while (s[i] == c && s[i] != '\0')
+		i++;
 	return (i);
 }
 
-static char	*put_strings(const char *s, char c)
+int	find_len(const char *start, char c)
 {
-	int		i;
-	int		j;
-	char	*strings;
+	int	slen;
 
-	i = 0;
-	j = 0;
-	strings = (char *)malloc(memcal(s, c) + count_strings(s, c) * 1);
-	while (s[i] != '\0')
-	{
-		if (s[i] == c && s[i] != '\0')
-			i++;
-		while (s[i] != c && s[i] != '\0')
-			strings[j++] = s[i++];
-		if (s[i] == '\0')
-			break ;
-		strings[j++] = '\0';
-	}
-	return (strings);
-}
-
-char *put_split(char *strings)
-{
-	return (strings);
+	slen = 0;
+	while (start[slen] != c)
+		slen++;
+	return (slen);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	char	**split;
-	char	*strings;
-	int		j;
-	int		mem;
+	int		start;
+	int		slen;
+	int		str_num;
+	int		i;
 
-	split = (char **)malloc((count_strings(s, c) + 1) * sizeof(char *));
+	if (!s)
+		return (NULL);
+	str_num = count_strings(s, c);
+	split = (char **)malloc((str_num + 1) * sizeof(char *));
 	if (!split)
 		return (NULL);
-	mem = memcal(s, c) + count_strings(s, c) * 1;
-	if (mem == 0)
+	start = find_start(s, c);
+	i = 0;
+	while (i < str_num)
 	{
-		*split = NULL;
-		return (split);
+		slen = find_len(&s[start], c);
+		split[i] = ft_substr(s, start, slen);
+		start = start + slen + find_start(&s[start + slen], c);
+		i++;
 	}
-	strings = put_strings(s, c);
-	j = 0;
-	while (mem > 0)
-	{
-		split[j] = put_split(strings);
-		j++;
-		while (*strings++ != '\0')
-		{
-			mem--;
-		}
-		strings++;
-		mem--;
-	}
+	split[str_num] = NULL;
 	return (split);
 }
-// int	main(void)
-// {
-// 	char	str[] = "";
-// 	char	c;
-// 	int		n;
-
-// 	c = ',';
-// 	n = count_strings(str, c);
-// 	printf("this is the string: %s\n", str);
-// 	printf("it has  %d  words\n", n);
-// 	return (0);
-// }

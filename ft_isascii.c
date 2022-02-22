@@ -6,11 +6,14 @@
 /*   By: ialinaok <ialinaok@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 15:06:10 by ialinaok          #+#    #+#             */
-/*   Updated: 2021/12/10 21:24:58 by ialinaok         ###   ########.fr       */
+/*   Updated: 2022/02/22 17:21:37 by ialinaok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
+/* function checks whether c is a 7-bit unsigned int char that fits into ASCII
+ * character set */
+
+#include "libft.h"
 
 int	ft_isascii(int c)
 {
@@ -28,11 +31,11 @@ int	ft_isascii(int c)
 // {
 // 	if (ft_isascii(678) == 0)
 // 	{
-// 		printf("This is not encoded in ASCII \n");
+// 		printf("This is not found in ASCII \n");
 // 	}
 // 	else
 // 	{
-// 		printf("This is encoded in ASCII \n");
+// 		printf("This is found in ASCII \n");
 // 	}
 // 	return (0);
 // }

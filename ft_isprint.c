@@ -6,11 +6,13 @@
 /*   By: ialinaok <ialinaok@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 15:13:54 by ialinaok          #+#    #+#             */
-/*   Updated: 2021/12/11 10:12:54 by ialinaok         ###   ########.fr       */
+/*   Updated: 2022/02/22 17:24:47 by ialinaok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
+/* function checks whether c is a printable character */
+
+#include "libft.h"
 
 int	ft_isprint(int c)
 {

@@ -6,11 +6,14 @@
 /*   By: ialinaok <ialinaok@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 15:06:17 by ialinaok          #+#    #+#             */
-/*   Updated: 2021/12/11 10:03:24 by ialinaok         ###   ########.fr       */
+/*   Updated: 2022/02/22 17:24:06 by ialinaok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+/* function checks if c is a decimal digit and returns c if true
+ * if c isn't a decimal digit, function returns 0 */
+
+#include "libft.h"
 
 int	ft_isdigit(int n)
 {

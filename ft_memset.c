@@ -6,9 +6,12 @@
 /*   By: ialinaok <ialinaok@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 12:14:17 by ialinaok          #+#    #+#             */
-/*   Updated: 2021/12/10 21:30:21 by ialinaok         ###   ########.fr       */
+/*   Updated: 2022/02/22 17:55:34 by ialinaok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* function fills the first n bytes of the memory area
+ * pointed to by s with the constant byte c */
 
 #include<stdio.h>
 
@@ -47,29 +50,3 @@ void	*ft_memset(void *s, int c, size_t n)
 	printf("\n");
 	return (0);
 }*/
-
-// int	main(void)
-// {
-// 	int	arr[2] = {2, 3};
-// 	int	n;
-
-// 	n = 0;
-// 	while (n < 2)
-// 	{
-// 		printf("%d", arr[n]);
-// 		n++;
-// 	}
-// 	printf("\n");
-// 	ft_memset(arr, 5, 8);
-// 	n = 0;
-// 	while (n < 2)
-// 	{
-// 		printf("%d", arr[n]);
-// 		n++;
-// 	}
-// 	printf("\n");
-// 	return (0);
-// }
-	//put = s; //we want here to pass the adress 
-	//that s stores to our new pointer
-	//so that we can dereference it's value

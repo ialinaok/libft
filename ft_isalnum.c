@@ -6,11 +6,13 @@
 /*   By: ialinaok <ialinaok@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 15:15:53 by ialinaok          #+#    #+#             */
-/*   Updated: 2021/12/11 10:05:39 by ialinaok         ###   ########.fr       */
+/*   Updated: 2022/02/22 17:18:11 by ialinaok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
+/* function checks for an alphanumeric character */
+
+#include "libft.h"
 
 int	ft_isalnum(int c)
 {

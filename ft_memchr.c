@@ -6,12 +6,18 @@
 /*   By: ialinaok <ialinaok@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/12 16:00:05 by ialinaok          #+#    #+#             */
-/*   Updated: 2021/12/13 00:17:40 by ialinaok         ###   ########.fr       */
+/*   Updated: 2022/02/22 17:44:52 by ialinaok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-//#include <string.h>
+/* function scans the initial n bytes of the memory area pointed to by s
+ * for the first instance of c
+ * both c and the bytes of the memory area pointed to by s are interpreted as
+ * unsigned char 
+ * returns a pointer to the matching byte or NULL if the character does not 
+ * occur in the given memory area */
+
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
@@ -31,6 +37,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
+
 //
 // int	main(void)
 // {

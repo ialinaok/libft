@@ -6,11 +6,12 @@
 /*   By: ialinaok <ialinaok@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 01:47:47 by ialinaok          #+#    #+#             */
-/*   Updated: 2021/12/17 12:33:48 by ialinaok         ###   ########.fr       */
+/*   Updated: 2022/02/22 17:57:30 by ialinaok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+/* function outputs the integer ’n’ to the given file descriptor */
+
 #include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)

@@ -6,11 +6,14 @@
 /*   By: ialinaok <ialinaok@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 01:44:16 by ialinaok          #+#    #+#             */
-/*   Updated: 2022/01/04 19:09:47 by ialinaok         ###   ########.fr       */
+/*   Updated: 2022/02/22 17:58:14 by ialinaok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+/* function outputs the string ’s’ to the given file descriptor, followed by
+ * a newline */
+
+#include "libft.h"
 
 void	ft_putendl_fd(char *s, int fd)
 {

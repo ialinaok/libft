@@ -6,9 +6,12 @@
 /*   By: ialinaok <ialinaok@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 23:06:49 by ialinaok          #+#    #+#             */
-/*   Updated: 2022/01/04 19:03:07 by ialinaok         ###   ########.fr       */
+/*   Updated: 2022/02/22 18:05:56 by ialinaok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* function returns a pointer to a new string which is a duplicate of the 
+ * string s; memory for the new string is allocated with malloc() */
 
 #include "libft.h"
 

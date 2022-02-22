@@ -6,11 +6,15 @@
 /*   By: ialinaok <ialinaok@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 15:28:12 by ialinaok          #+#    #+#             */
-/*   Updated: 2022/01/04 19:06:59 by ialinaok         ###   ########.fr       */
+/*   Updated: 2022/02/22 17:28:32 by ialinaok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+/* function allocates (with malloc()) and returns a string representing 
+ * the integer received as an argument
+ * negative numbers are handled */
+
+#include "libft.h"
 
 static int	count_digits(int n)
 {

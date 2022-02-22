@@ -6,9 +6,11 @@
 /*   By: ialinaok <ialinaok@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/30 20:22:33 by ialinaok          #+#    #+#             */
-/*   Updated: 2022/01/04 15:15:21 by ialinaok         ###   ########.fr       */
+/*   Updated: 2022/02/22 17:30:11 by ialinaok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* function adds new element at the end of the list */
 
 #include "libft.h"
 

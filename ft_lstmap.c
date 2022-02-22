@@ -6,9 +6,14 @@
 /*   By: ialinaok <ialinaok@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 15:52:11 by ialinaok          #+#    #+#             */
-/*   Updated: 2022/01/04 16:19:31 by ialinaok         ###   ########.fr       */
+/*   Updated: 2022/02/22 17:37:01 by ialinaok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* fucntion iterates the list ’lst’ and applies the function ’f’ to the content 
+ * of each element; creates a new list resulting of the successive applications 
+ * of the function ’f’; the ’del’ function is used to delete the content of an 
+ * element if needed */
 
 #include "libft.h"
 

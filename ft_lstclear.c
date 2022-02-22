@@ -6,9 +6,13 @@
 /*   By: ialinaok <ialinaok@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 15:29:34 by ialinaok          #+#    #+#             */
-/*   Updated: 2022/01/04 15:41:48 by ialinaok         ###   ########.fr       */
+/*   Updated: 2022/02/22 17:32:21 by ialinaok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* function deletes and frees the given element and every successor of that 
+ * element, using the function ’del’ and free()
+ * the pointer to the list is set to NULL */
 
 #include "libft.h"
 

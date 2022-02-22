@@ -6,9 +6,11 @@
 /*   By: ialinaok <ialinaok@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/30 16:36:58 by ialinaok          #+#    #+#             */
-/*   Updated: 2022/01/04 15:05:20 by ialinaok         ###   ########.fr       */
+/*   Updated: 2022/02/22 17:38:52 by ialinaok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* function counts the number of elements in the list */
 
 #include "libft.h"
 

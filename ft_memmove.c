@@ -6,11 +6,13 @@
 /*   By: ialinaok <ialinaok@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 13:18:39 by ialinaok          #+#    #+#             */
-/*   Updated: 2021/12/18 18:57:11 by ialinaok         ###   ########.fr       */
+/*   Updated: 2022/02/22 17:52:00 by ialinaok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+/* function copies n bytes from memory area src to memory area dest
+ * the memory areas may overlap */
+
 #include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)

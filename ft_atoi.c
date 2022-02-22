@@ -6,13 +6,15 @@
 /*   By: ialinaok <ialinaok@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 15:34:25 by ialinaok          #+#    #+#             */
-/*   Updated: 2022/02/22 16:06:22 by ialinaok         ###   ########.fr       */
+/*   Updated: 2022/02/22 16:15:04 by ialinaok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /* function converts the initial portion of the string pointed to by ptr to int
-   returns a converted value or 0 on error
-   ignores whitespaces before the number */
+ * returns a converted value or 0 on error
+ * ignores whitespaces before the number */
+
+#include "libft.h"
 
 int	ft_atoi(const char *ptr)
 {

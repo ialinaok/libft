@@ -6,9 +6,13 @@
 /*   By: ialinaok <ialinaok@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 19:12:27 by ialinaok          #+#    #+#             */
-/*   Updated: 2022/01/04 19:14:38 by ialinaok         ###   ########.fr       */
+/*   Updated: 2022/02/22 16:14:46 by ialinaok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* function allocates memory for an array of nmemb elements of size bytes each
+ * returns a pointer to allocated memory or NULL if allocation fails
+ * memory is set to zero */
 
 #include "libft.h"
 

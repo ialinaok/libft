@@ -6,11 +6,15 @@
 /*   By: ialinaok <ialinaok@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/09 21:43:04 by ialinaok          #+#    #+#             */
-/*   Updated: 2021/12/15 23:21:42 by ialinaok         ###   ########.fr       */
+/*   Updated: 2022/02/22 18:27:46 by ialinaok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
+/* function concatenates strings and takes the full size of the buffer (not just
+ * the length) and guarantees to NUL-terminate the result (as long as there is 
+ * at least one byte free in dst); a byte for the NUL should be included in size
+ * both src and dst must be NUL-terminated */
+
 #include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
@@ -40,31 +44,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	return (dst_len + src_len);
 }
 
-// size_t	ft_strlcat(char *dst, const char *src, size_t size)
-// {
-// 	size_t	dst_len;
-// 	size_t	src_len;
-// 	size_t	n;
-
-// 	n = size;
-// 	dst_len = ft_strlen(dst);
-// 	src_len = ft_strlen(src);
-// 	while (((size - 1) > 0) && ((size - 1) > dst_len))
-// 	{
-// 		*dst++ = *src++;
-// 		size--;
-// 	}
-// 	dst[n - 1] = '\0';
-// 	if (n < dst_len)
-// 	{
-// 		return (dst_len + src_len);
-// 	}
-// 	else
-// 	{
-// 		return (n + src_len);
-// 	}
-// }
-
 // int main(void)
 // {
 //   char dst[12] = "hello";
@@ -84,5 +63,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 //   printf("size is: %d\n", size);
 //   return (0);
 // }
-//line 29 at this point dst is at null's address
-//n to store the original size

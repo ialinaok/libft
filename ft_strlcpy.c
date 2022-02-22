@@ -6,11 +6,15 @@
 /*   By: ialinaok <ialinaok@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/09 11:00:44 by ialinaok          #+#    #+#             */
-/*   Updated: 2021/12/16 16:24:05 by ialinaok         ###   ########.fr       */
+/*   Updated: 2022/02/22 18:27:38 by ialinaok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+/* function copies strings, takes the full size of the buffer (not just the 
+ * length) and guarantees to NUL-terminate the result (as long as size is 
+ * larger than 0; a byte for the NUL should be included in size
+ * src must be NUL-terminated */
+
 #include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dst_size)
@@ -39,40 +43,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dst_size)
 	}
 	return (src_len);
 }
-
-// size_t	ft_strlcpy(char *dest, const char *src, size_t dst_size)
-// {
-// 	size_t	counter;
-
-// 	counter = 0;
-// 	if ((dst_size > 0) && (dst_size != 0))
-// 	{
-// 		while (src[counter] != '\0')
-// 		{
-// 			if (counter == dst_size)
-// 			{
-// 				counter--;
-// 				break ;
-// 			}
-// 			*(dest + counter) = *(src + counter);
-// 			counter++;
-// 		}
-// 	}
-// 	*(dest + counter) = '\0';
-// 	while (*(src + counter) != '\0')
-// 	{
-// 		counter++;
-// 	}
-// 	return (counter);
-// }
-// int	main(void)
-// {
-//   char dst[6] = "Alina";
-//   char src[10] = "Hardfield";
-//   ft_strlcpy(dst, src, 6);
-//   printf("the new string is: %s", dst);
-//   return (0);
-// }
 
 // int main(void)
 // {
@@ -116,6 +86,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dst_size)
 // 	printf("size of source string is: %d \n", src_size);
 // 	return (0);
 // }
-// // counter is used to determine how much we can copy
-// // and to later guard overflow
-// in that version idk how to prevent copying when size = 0

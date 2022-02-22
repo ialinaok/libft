@@ -6,12 +6,13 @@
 /*   By: ialinaok <ialinaok@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 12:13:39 by ialinaok          #+#    #+#             */
-/*   Updated: 2022/01/04 19:27:46 by ialinaok         ###   ########.fr       */
+/*   Updated: 2022/02/22 18:10:50 by ialinaok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+/* function allocates (with malloc()) and returns a new string, which is the 
+ * result of the concatenation of ’s1’ and ’s2’ */
+
 #include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)

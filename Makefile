@@ -1,3 +1,4 @@
+# Makefile compiled the libft library
 NAME=libft.a
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror

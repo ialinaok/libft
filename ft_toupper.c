@@ -6,11 +6,11 @@
 /*   By: ialinaok <ialinaok@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 14:50:01 by ialinaok          #+#    #+#             */
-/*   Updated: 2021/12/10 15:09:52 by ialinaok         ###   ########.fr       */
+/*   Updated: 2022/02/23 10:47:55 by ialinaok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+/* function converts the letter c to upper case, if possible */
 
 int	ft_toupper(int c)
 {

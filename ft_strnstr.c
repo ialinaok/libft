@@ -6,72 +6,41 @@
 /*   By: ialinaok <ialinaok@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 00:49:39 by ialinaok          #+#    #+#             */
-/*   Updated: 2021/12/19 17:23:49 by ialinaok         ###   ########.fr       */
+/*   Updated: 2022/02/23 10:40:41 by ialinaok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+/* function locates the	first occurrence of the	null-terminated string needle 
+ * in the string big, where not more than n characters are searched
+ * characters that appear after a `\0' character are not searched */
+
 #include "libft.h"
 
-char	*ft_strnstr(const char *s1, const char *s2, size_t n)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t n)
 {
 	char	*occ;
+	size_t	needle_len;
+	int		i;
 
-	if (*s2 == '\0')
+	i = 0;
+	needle_len = ft_strlen(needle);
+	occ = (char *) haystack;
+	if (needle_len == 0)
+		return (occ);
+	if (needle_len > ft_strlen(haystack))
+		return (NULL);
+	while (needle_len + i <= n)
 	{
-		return ((char *)s1);
-	}
-	while ((*s1 != *s2) && (n > 0) && *s1 != '\0')
-	{
-		s1++;
-		n--;
-	}
-	occ = (char *)s1;
-	while ((n > 0) && (*s1++ == *s2++))
-	{
-		if (*s2 == '\0')
+		if (haystack[i] == needle[0])
 		{
-			return (occ);
+			if (ft_strncmp(&haystack[i], needle, needle_len) == 0)
+				return (&occ[i]);
 		}
-		if (*s1 == '\0')
-		{
-			return (NULL);
-		}
-		n--;
+		i++;
 	}
 	return (NULL);
 }
 
-// char	*ft_strnstr(const char *s1, const char *s2, size_t n)
-// {
-// 	char	*ptr_s1;
-// 	char	*ptr_s2;
-// 	size_t	cmp;
-// 	char	*occ;
-
-// 	ptr_s1 = (char *)s1;
-// 	ptr_s2 = (char *)s2;
-// 	if (*s2 == '\0')
-// 	{
-// 		return (ptr_s1);
-// 	}
-// 	while ((*ptr_s1 != *ptr_s2) && (n > 0))
-// 	{
-// 		ptr_s1++;
-// 		n--;
-// 	}
-// 	occ = ptr_s1;
-// 	while ((n - 1) > 0)
-// 	{
-// 		cmp = ft_strncmp(ptr_s1, ptr_s2, ft_strlen(s2));
-// 		n--;
-// 	}
-// 	if (cmp == 0)
-// 	{
-// 		return (occ);
-// 	}
-// 	return (NULL);
-// }
 
 // int	main(void)
 // {

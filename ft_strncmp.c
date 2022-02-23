@@ -6,11 +6,15 @@
 /*   By: ialinaok <ialinaok@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 23:03:56 by ialinaok          #+#    #+#             */
-/*   Updated: 2021/12/19 14:54:17 by ialinaok         ###   ########.fr       */
+/*   Updated: 2022/02/23 10:37:46 by ialinaok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+/* function compares the two strings s1 and s2 and returns an integer less than,
+ * equal to, or greater than zero if s1 is found, respectively, to be less than,
+ * to match, or be greater than s2 */
+
+#include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

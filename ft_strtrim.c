@@ -6,11 +6,14 @@
 /*   By: ialinaok <ialinaok@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 22:22:06 by ialinaok          #+#    #+#             */
-/*   Updated: 2022/01/04 20:02:49 by ialinaok         ###   ########.fr       */
+/*   Updated: 2022/02/23 10:43:55 by ialinaok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+/* function allocates (with malloc())) and returns a copy of ’s1’ with the
+ * characters specified in ’set’ removed from the beginning and the end of 
+ * the string */
+
 #include "libft.h"
 
 static int	find_end(char const *s1, char const *s2)

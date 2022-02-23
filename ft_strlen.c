@@ -6,11 +6,14 @@
 /*   By: ialinaok <ialinaok@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 15:05:36 by ialinaok          #+#    #+#             */
-/*   Updated: 2021/12/25 18:20:58 by ialinaok         ###   ########.fr       */
+/*   Updated: 2022/02/22 18:29:56 by ialinaok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
+/* function calculates the length of the string s, excluding the terminating 
+ * null byte */
+
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {

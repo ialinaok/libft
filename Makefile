@@ -1,5 +1,3 @@
-# this makefile will compile a libft library from the source .c files
-
 NAME=libft.a
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
@@ -58,10 +56,10 @@ $(NAME): $(OBJS)
 bonus: $(BONUS_OBJS) $(OBJS)
 	ar -rcs $(NAME) $(OBJS) $(BONUS_OBJS)
 
-clean: # will remove .o files
+clean:
 	rm -f $(OBJS) $(BONUS_OBJS)
 
-fclean: clean # will run clean(rm all .o files) and libft.a
+fclean: clean
 	rm -f $(NAME)
 
 re: fclean all

@@ -6,7 +6,7 @@
 /*   By: apielasz <apielasz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 14:28:41 by ialinaok          #+#    #+#             */
-/*   Updated: 2022/10/25 15:05:34 by apielasz         ###   ########.fr       */
+/*   Updated: 2022/10/25 15:25:12 by apielasz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include<unistd.h> 
 # include<stdlib.h>
-
+# include<stdarg.h>
 
 // >>>>> for get_next_line <<<<< //
 
@@ -23,7 +23,7 @@
 #  define BUFFER_SIZE 42
 # endif
 
-// >>>>><<<<< //
+// >>>>> * <<<<< //
 
 typedef struct s_list
 {
@@ -82,5 +82,18 @@ void	move_leftovers(char *buffer, char *find_nl);
 char	*done_reading(char **line);
 char	*allocate_tmp(char **line, char *find_nl, int bufflen);
 char	*get_next_line(int fd);
+
+// >>>>> for ft_printf <<<<< //
+
+int	ft_printf(const char *format, ...);
+int	ft_putchar_std_out(char c);
+int	ft_putstr_std_out(char *str);
+int	ft_putdec_std_out(int n);
+int	ft_puthex_lower_std_out(unsigned int hex);
+int	ft_puthex_upper_std_out(unsigned int hex);
+int	ft_putuint_std_out(unsigned int uint);
+int	ft_putptr_std_out(void *ptr);
+
+// >>>>> * <<<<< //
 
 #endif //LIBFT_H

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ialinaok <ialinaok@student.42.fr>          +#+  +:+       +#+        */
+/*   By: apielasz <apielasz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 14:50:01 by ialinaok          #+#    #+#             */
-/*   Updated: 2022/02/23 10:47:55 by ialinaok         ###   ########.fr       */
+/*   Updated: 2022/10/25 15:10:50 by apielasz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,7 @@ int	ft_toupper(int c)
 		return (u);
 	}
 	else
-	{
 		return (c);
-	}
 }
 
 // int main(void)

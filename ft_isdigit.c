@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ialinaok <ialinaok@student.42.fr>          +#+  +:+       +#+        */
+/*   By: apielasz <apielasz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 15:06:17 by ialinaok          #+#    #+#             */
-/*   Updated: 2022/02/22 17:24:06 by ialinaok         ###   ########.fr       */
+/*   Updated: 2022/10/25 15:08:55 by apielasz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,9 @@
 int	ft_isdigit(int n)
 {
 	if (n >= '0' && n <= '9')
-	{
 		return (1);
-	}
 	else
-	{
 		return (0);
-	}
 }
 
 // int	main(void)

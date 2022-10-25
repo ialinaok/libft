@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ialinaok <ialinaok@student.42.fr>          +#+  +:+       +#+        */
+/*   By: apielasz <apielasz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 15:10:22 by ialinaok          #+#    #+#             */
-/*   Updated: 2022/02/23 10:47:28 by ialinaok         ###   ########.fr       */
+/*   Updated: 2022/10/25 15:10:45 by apielasz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,7 @@ int	ft_tolower(int c)
 		return (l);
 	}
 	else
-	{
 		return (c);
-	}
 }
 
 // int main(void)

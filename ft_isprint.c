@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ialinaok <ialinaok@student.42.fr>          +#+  +:+       +#+        */
+/*   By: apielasz <apielasz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 15:13:54 by ialinaok          #+#    #+#             */
-/*   Updated: 2022/02/22 17:24:47 by ialinaok         ###   ########.fr       */
+/*   Updated: 2022/10/25 15:09:00 by apielasz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,9 @@
 int	ft_isprint(int c)
 {
 	if (c >= 32 && c < 127)
-	{
 		return (1);
-	}
 	else
-	{
 		return (0);
-	}
 }
 
 // int	main(void)

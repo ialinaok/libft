@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ialinaok <ialinaok@student.42.fr>          +#+  +:+       +#+        */
+/*   By: apielasz <apielasz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 01:47:47 by ialinaok          #+#    #+#             */
-/*   Updated: 2022/02/22 17:57:30 by ialinaok         ###   ########.fr       */
+/*   Updated: 2022/10/25 15:09:50 by apielasz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,7 @@ void	ft_putnbr_fd(int n, int fd)
 		n *= -1;
 	}
 	if (n >= 10)
-	{
 		ft_putnbr_fd(n / 10, fd);
-	}
 	intprint = n % 10 + '0';
 	write(fd, &intprint, 1);
 }

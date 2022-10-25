@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ialinaok <ialinaok@student.42.fr>          +#+  +:+       +#+        */
+/*   By: apielasz <apielasz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 16:09:56 by ialinaok          #+#    #+#             */
-/*   Updated: 2022/02/22 18:04:04 by ialinaok         ###   ########.fr       */
+/*   Updated: 2022/10/25 15:10:32 by apielasz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,9 @@ char	*ft_strrchr(const char *str, int c)
 
 	ptr = (char *)str;
 	while (*ptr != '\0')
-	{
 		ptr++;
-	}
 	if (c == '\0')
-	{
 		return (ptr);
-	}
 	while (ptr != (str - 1))
 	{
 		if (*ptr == c)

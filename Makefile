@@ -35,7 +35,17 @@ SRCS =  ft_isalpha.c \
 		ft_putchar_fd.c \
 		ft_putstr_fd.c \
 		ft_putendl_fd.c \
-		ft_putnbr_fd.c
+		ft_putnbr_fd.c \
+		ft_printf.c \
+		ft_putchar_std_out.c \
+		ft_putdec_std_out.c \
+		ft_puthex_lower_std_out.c \
+		ft_puthex_upper_std_out.c \
+		ft_putptr_std_out.c \
+		ft_putstr_std_out.c \
+		ft_putuint_std_out.c \
+		get_next_line.c \
+		get_next_line_utils.c
 BONUS_SRCS :=   ft_lstadd_back.c \
 				ft_lstadd_front.c \
 				ft_lstlast.c \

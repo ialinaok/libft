@@ -6,11 +6,11 @@
 /*   By: apielasz <apielasz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 11:06:31 by ialinaok          #+#    #+#             */
-/*   Updated: 2022/10/25 15:06:01 by apielasz         ###   ########.fr       */
+/*   Updated: 2022/10/25 15:58:31 by apielasz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "libft.h"
 
 size_t	ft_strlen(char const *str)
 {

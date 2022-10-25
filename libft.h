@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ialinaok <ialinaok@student.42.fr>          +#+  +:+       +#+        */
+/*   By: apielasz <apielasz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 14:28:41 by ialinaok          #+#    #+#             */
-/*   Updated: 2022/02/23 11:28:57 by ialinaok         ###   ########.fr       */
+/*   Updated: 2022/10/25 15:05:34 by apielasz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,15 @@
 
 # include<unistd.h> 
 # include<stdlib.h>
+
+
+// >>>>> for get_next_line <<<<< //
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 42
+# endif
+
+// >>>>><<<<< //
 
 typedef struct s_list
 {
@@ -65,5 +74,13 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void*));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
+// >>>>> for get_next_line <<<<< //
+
+void	join_line(char **line, char *buffer);
+void	move_leftovers(char *buffer, char *find_nl);
+char	*done_reading(char **line);
+char	*allocate_tmp(char **line, char *find_nl, int bufflen);
+char	*get_next_line(int fd);
 
 #endif //LIBFT_H

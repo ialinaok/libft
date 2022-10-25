@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ialinaok <ialinaok@student.42.fr>          +#+  +:+       +#+        */
+/*   By: apielasz <apielasz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 15:05:36 by ialinaok          #+#    #+#             */
-/*   Updated: 2022/02/22 18:29:56 by ialinaok         ###   ########.fr       */
+/*   Updated: 2022/10/25 15:01:16 by apielasz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,7 @@ size_t	ft_strlen(const char *s)
 
 	n = 0;
 	while (s[n] != '\0')
-	{
 		n++;
-	}
 	return (n);
 }
 

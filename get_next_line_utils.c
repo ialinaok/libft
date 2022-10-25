@@ -1,27 +1,51 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: apielasz <apielasz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/26 15:39:55 by ialinaok          #+#    #+#             */
-/*   Updated: 2022/10/25 15:01:35 by apielasz         ###   ########.fr       */
+/*   Created: 2022/02/22 11:06:31 by ialinaok          #+#    #+#             */
+/*   Updated: 2022/10/25 15:06:01 by apielasz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* function erases n bytes of memory starting at location pointed to by s */
+#include "get_next_line.h"
 
-#include "libft.h"
+size_t	ft_strlen(char const *str)
+{
+	size_t	n;
 
-void	ft_bzero(void *s, size_t n)
+	n = 0;
+	while (str[n])
+		n++;
+	return (n);
+}
+
+void	ft_bzero(void *str, size_t n)
 {
 	unsigned char	*put;
 
-	put = s;
+	put = str;
 	while (n > 0)
 	{
 		*put++ = '\0';
 		n--;
 	}
+}
+
+char	*ft_strchr(char const *str, int c)
+{
+	char	*ptr;
+
+	ptr = (char *) str;
+	while (*ptr)
+	{
+		if (*ptr == c)
+			return (ptr);
+		ptr++;
+	}
+	if (*ptr == c)
+		return (ptr);
+	return (NULL);
 }
